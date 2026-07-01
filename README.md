@@ -12,6 +12,7 @@ flow-context    Scan and verify brownfield project context.
 flow-check      Review Flow artifacts for context drift.
 flow-track      Summarize Flow task status and blockers.
 flow-ask        Answer project questions with cited local context.
+flow-export     Generate issue-ready Markdown from Flow tasks.
 flow-grill      Clarify a product idea before writing a spec.
 flow-spec       Create readable product specs and task files.
 flow-design     Create functional design docs.
@@ -67,6 +68,7 @@ Use flow-context to scan this brownfield project and draft Flow context.
 Use flow-check to review this Flow spec against confirmed context.
 Use flow-track to summarize task status and blockers.
 Use flow-ask to answer where invoice data access lives.
+Use flow-export to generate issue-ready Markdown from these Flow tasks.
 Use flow-grill to clarify this feature idea.
 Use flow-spec to create a PRD for saved payment methods.
 Use flow-design to create functional design docs for this feature.
@@ -113,6 +115,12 @@ V3 tracking, readiness, and ask is drafted in:
 specs/flow-v3-tracking-readiness-ask/
 ```
 
+V4 issue export is drafted in:
+
+```text
+specs/flow-v4-issue-export/
+```
+
 ## Roadmap
 
 See [docs/roadmap.md](docs/roadmap.md) for the fuller roadmap.
@@ -120,6 +128,7 @@ See [docs/roadmap.md](docs/roadmap.md) for the fuller roadmap.
 Current direction:
 
 - Dogfood `flow-track`, readiness checks, and `flow-ask` against more brownfield fixtures.
+- Use `flow-export` to generate issue-ready Markdown while keeping external publishing opt-in.
 - Keep `flow-ask` source-cited and local-first.
 - Keep vector/RAG support opt-in and outside the core Flow workflow.
 

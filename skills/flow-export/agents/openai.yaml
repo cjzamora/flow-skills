@@ -1,0 +1,5 @@
+interface:
+  display_name: "Flow Export"
+  short_description: "Manual only: generate issue-ready Markdown from Flow tasks."
+  default_prompt: "Use flow-export to generate issue-ready Markdown from these Flow tasks."
+

@@ -62,6 +62,7 @@ Implemented skills and updates:
 ```text
 flow-track
 flow-ask
+flow-export
 flow-check readiness upgrades
 ```
 
@@ -72,6 +73,7 @@ Outcome:
 - Add `flow-ask` for source-cited project Q&A.
 - Start `flow-ask` with confirmed context and local search.
 - Add local source manifests and chunk maps before introducing optional vector search.
+- Generate issue-ready Markdown without automatic external publishing.
 
 Validation:
 
@@ -85,10 +87,10 @@ specs/flow-v3-tracking-readiness-ask/validation/brownfield-v3-validation.md
 
 Potential direction:
 
-- Generate issue-ready Markdown for GitHub, Jira, Linear, or another tracker.
 - Add more fixture projects.
 - Expand `flow-ask` validation with additional context shapes.
 - Explore optional local vector implementation only after Tier 0 and Tier 1 are proven useful.
+- Consider explicit, opt-in tracker publishing after local export is dogfooded.
 
 ## Candidate Improvements
 
@@ -134,6 +136,10 @@ Boundary:
 ### Issue Export
 
 Generate issue-ready Markdown for GitHub, Jira, Linear, or another tracker.
+
+Implemented first step:
+
+- `flow-export` generates local/copy-ready Markdown under the configured Flow root.
 
 Boundary:
 

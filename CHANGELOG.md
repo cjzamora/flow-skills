@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 - 2026-07-02
+
+- Added `flow-export` for local issue-ready Markdown export.
+- Added issue export validation artifacts to the brownfield billing fixture.
+- Added a Flow v4 issue export PRD.
+- Updated roadmap and public docs to include issue Markdown export.
+
 ## 0.3.0 - 2026-07-02
 
 - Added `flow-track` for local task summaries, blockers, assignees, stale dates, and delivery recommendations.

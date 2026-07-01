@@ -101,6 +101,7 @@ skills/flow-check
 skills/flow-context
 skills/flow-track
 skills/flow-ask
+skills/flow-export
 skills/flow-scaffold
 skills/flow-grill
 skills/flow-spec
@@ -129,4 +130,5 @@ Use flow-context to scan this project and draft Flow context.
 Use flow-check to review a Flow artifact against confirmed context.
 Use flow-track to summarize Flow task status.
 Use flow-ask to answer a project question with sources.
+Use flow-export to generate issue-ready Markdown.
 ```

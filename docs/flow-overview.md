@@ -44,6 +44,7 @@ Flow v3 is drafted as tracking, readiness, and ask:
 ```text
 flow-track
 flow-ask
+flow-export
 flow-check readiness upgrades
 ```
 
@@ -488,3 +489,18 @@ Retrieval tiers:
 - Tier 3: optional external/vector provider integrations.
 
 `flow-ask` must cite sources, state confidence, distinguish sourced facts from inference, and say when an answer is unknown. Vector search is optional support, not the source of truth.
+
+## flow-export
+
+`flow-export` generates issue-ready Markdown from Flow task files, specs, handoffs, or `flow-track` reports.
+
+Default output:
+
+```text
+[flow-root]/exports/[feature]/
+  README.md
+  001-task-name.md
+  002-task-name.md
+```
+
+It preserves source links, acceptance criteria, blockers, assignees, and external links. It does not publish to external trackers by default.
