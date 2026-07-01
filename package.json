@@ -1,6 +1,6 @@
 {
   "name": "flow-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Lightweight Flow product-development skills for Codex, Claude, and OpenCode.",
   "private": false,
   "repository": {
@@ -19,13 +19,18 @@
   "files": [
     "bin/",
     "skills/",
+    "examples/",
     "README.md",
-    "INSTALLATION.md"
+    "INSTALLATION.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "install:codex": "node bin/flow-skills.js install --target codex",
     "install:claude": "node bin/flow-skills.js install --target claude",
-    "install:opencode": "node bin/flow-skills.js install --target opencode"
+    "install:opencode": "node bin/flow-skills.js install --target opencode",
+    "install:codex:disabled": "node bin/flow-skills.js install --target codex --disabled",
+    "validate": "node bin/flow-skills.js validate",
+    "test": "node bin/flow-skills.js validate"
   },
   "engines": {
     "node": ">=18"

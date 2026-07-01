@@ -1,0 +1,24 @@
+model Customer {
+  id       String    @id
+  name     String
+  invoices Invoice[]
+  payments Payment[]
+}
+
+model Invoice {
+  id         String   @id
+  customerId String
+  status     String
+  dueDate    DateTime
+  totalCents Int
+  customer   Customer @relation(fields: [customerId], references: [id])
+}
+
+model Payment {
+  id         String   @id
+  customerId String
+  amountCents Int
+  receivedAt DateTime
+  customer   Customer @relation(fields: [customerId], references: [id])
+}
+

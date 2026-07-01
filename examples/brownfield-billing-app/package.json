@@ -1,0 +1,15 @@
+{
+  "name": "brownfield-billing-app-fixture",
+  "private": true,
+  "scripts": {
+    "test": "node tests/billing-workflows.test.js"
+  },
+  "dependencies": {
+    "next": "15.0.0",
+    "react": "19.0.0"
+  },
+  "devDependencies": {
+    "prisma": "6.0.0"
+  }
+}
+

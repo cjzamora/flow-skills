@@ -22,6 +22,7 @@ flow-handoff    Create concise implementation handoffs.
 ```text
 skills/                       Installable Flow skills
 specs/flow-skill-suite/        PRD and task breakdown for this suite
+examples/                      Validation fixtures for dogfooding
 docs/flow-overview.md          Suite design notes
 AGENTS.md                      Agent guidance for this repo
 bin/flow-skills.js             Installer CLI
@@ -43,6 +44,12 @@ From a local clone:
 npm run install:codex
 npm run install:claude
 npm run install:opencode
+```
+
+Install without activating the skills:
+
+```sh
+npm run install:codex:disabled
 ```
 
 See [INSTALLATION.md](INSTALLATION.md) for paths, options, and examples.
@@ -93,4 +100,18 @@ V2 context intelligence is tracked in:
 
 ```text
 specs/flow-v2-context-intelligence/
+```
+
+## Validate
+
+Check bundled skill metadata and required sections:
+
+```sh
+npm run validate
+```
+
+Print the installed package version:
+
+```sh
+node bin/flow-skills.js version
 ```

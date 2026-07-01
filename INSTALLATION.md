@@ -34,6 +34,12 @@ node bin/flow-skills.js install --target claude
 node bin/flow-skills.js install --target opencode
 ```
 
+Install without activating the skills:
+
+```sh
+node bin/flow-skills.js install --target codex --disabled
+```
+
 ## Default Install Paths
 
 ```text
@@ -68,6 +74,24 @@ List bundled skills:
 npx github:cjzamora/flow-skills list
 ```
 
+Validate bundled skills:
+
+```sh
+npx github:cjzamora/flow-skills validate
+```
+
+Print the package version:
+
+```sh
+npx github:cjzamora/flow-skills version
+```
+
+Install under `.disabled/flow-skills` instead of the active skills directory:
+
+```sh
+npx github:cjzamora/flow-skills install --target codex --disabled
+```
+
 ## What Gets Installed
 
 The installer copies these folders:
@@ -84,6 +108,14 @@ skills/flow-handoff
 ```
 
 Existing skill folders are skipped by default. Use `--force` to replace them.
+
+When `--disabled` is used, skills are copied under:
+
+```text
+[target skills directory]/.disabled/flow-skills/
+```
+
+This keeps the files available for inspection without making them active skills.
 
 ## Verify
 
