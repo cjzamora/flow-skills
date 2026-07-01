@@ -99,6 +99,8 @@ The installer copies these folders:
 ```text
 skills/flow-check
 skills/flow-context
+skills/flow-track
+skills/flow-ask
 skills/flow-scaffold
 skills/flow-grill
 skills/flow-spec
@@ -125,4 +127,6 @@ After installation, confirm the target skills directory contains the Flow folder
 Use flow-scaffold to set up this repo for Flow.
 Use flow-context to scan this project and draft Flow context.
 Use flow-check to review a Flow artifact against confirmed context.
+Use flow-track to summarize Flow task status.
+Use flow-ask to answer a project question with sources.
 ```

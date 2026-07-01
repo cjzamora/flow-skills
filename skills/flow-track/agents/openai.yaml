@@ -1,0 +1,5 @@
+interface:
+  display_name: "Flow Track"
+  short_description: "Manual only: summarize Flow task status and blockers."
+  default_prompt: "Use flow-track to summarize task status and blockers."
+

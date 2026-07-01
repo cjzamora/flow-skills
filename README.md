@@ -10,6 +10,8 @@ Flow is built for PMs, designers, developers, clients, stakeholders, and agents 
 flow-scaffold   Prepare a repo for Flow product docs.
 flow-context    Scan and verify brownfield project context.
 flow-check      Review Flow artifacts for context drift.
+flow-track      Summarize Flow task status and blockers.
+flow-ask        Answer project questions with cited local context.
 flow-grill      Clarify a product idea before writing a spec.
 flow-spec       Create readable product specs and task files.
 flow-design     Create functional design docs.
@@ -24,6 +26,7 @@ skills/                       Installable Flow skills
 specs/flow-skill-suite/        PRD and task breakdown for this suite
 examples/                      Validation fixtures for dogfooding
 docs/flow-overview.md          Suite design notes
+docs/roadmap.md                Future improvements and roadmap
 AGENTS.md                      Agent guidance for this repo
 bin/flow-skills.js             Installer CLI
 ```
@@ -62,6 +65,8 @@ After installation, ask your agent to use one of the Flow skills:
 Use flow-scaffold to set up this repo for Flow.
 Use flow-context to scan this brownfield project and draft Flow context.
 Use flow-check to review this Flow spec against confirmed context.
+Use flow-track to summarize task status and blockers.
+Use flow-ask to answer where invoice data access lives.
 Use flow-grill to clarify this feature idea.
 Use flow-spec to create a PRD for saved payment methods.
 Use flow-design to create functional design docs for this feature.
@@ -88,7 +93,7 @@ Existing projects can keep using `specs/` or another documented Flow root. The s
 
 ## Status
 
-The v1 skills and v2 context intelligence skills are implemented under `skills/*`.
+The v1, v2, and v3 skills are implemented under `skills/*`.
 
 V1 validation on a sample feature is tracked in:
 
@@ -101,6 +106,22 @@ V2 context intelligence is tracked in:
 ```text
 specs/flow-v2-context-intelligence/
 ```
+
+V3 tracking, readiness, and ask is drafted in:
+
+```text
+specs/flow-v3-tracking-readiness-ask/
+```
+
+## Roadmap
+
+See [docs/roadmap.md](docs/roadmap.md) for the fuller roadmap.
+
+Current direction:
+
+- Dogfood `flow-track`, readiness checks, and `flow-ask` against more brownfield fixtures.
+- Keep `flow-ask` source-cited and local-first.
+- Keep vector/RAG support opt-in and outside the core Flow workflow.
 
 ## Validate
 

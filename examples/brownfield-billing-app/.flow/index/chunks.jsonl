@@ -1,0 +1,4 @@
+{"id":"chunk-001","source":".flow/context/product.md","kind":"context","anchor":"# Product Context","summary":"Billing app supports finance operators and core concepts Customer, Invoice, Payment, and Billing report.","citation":".flow/context/product.md"}
+{"id":"chunk-002","source":".flow/context/codebase-patterns.md","kind":"context","anchor":"## Server Data Access","summary":"Database access should go through server modules instead of UI components.","citation":".flow/context/codebase-patterns.md"}
+{"id":"chunk-003","source":"prisma/schema.prisma","kind":"schema","anchor":"Customer Invoice Payment","summary":"Schema defines Customer, Invoice, and Payment models.","citation":"prisma/schema.prisma"}
+

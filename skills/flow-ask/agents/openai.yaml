@@ -1,0 +1,5 @@
+interface:
+  display_name: "Flow Ask"
+  short_description: "Manual only: answer project questions with cited Flow context."
+  default_prompt: "Use flow-ask to answer this project question with sources."
+

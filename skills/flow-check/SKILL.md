@@ -1,11 +1,11 @@
 ---
 name: flow-check
-description: Review Flow artifacts or current project state against confirmed Flow context. Use only when the user explicitly invokes flow-check or explicitly asks Flow to check drift, consistency, or context alignment.
+description: Review Flow artifacts, readiness, or current project state against confirmed Flow context. Use only when the user explicitly invokes flow-check or explicitly asks Flow to check drift, readiness, consistency, or context alignment.
 ---
 
 # Flow Check
 
-Review specs, designs, wireframes, handoffs, or current codebase state against confirmed Flow context.
+Review specs, designs, wireframes, handoffs, task state, or current codebase state against confirmed Flow context.
 
 `flow-check` is a review skill. It reports drift, gaps, and unsupported assumptions. It does not enforce rules or change files unless the user explicitly asks.
 
@@ -33,6 +33,7 @@ Review any target the user names:
 - Wireframe packages.
 - Implementation handoffs.
 - Task files.
+- Task summaries or `flow-track` reports.
 - Current project structure.
 - Codebase patterns after a refactor or feature implementation.
 
@@ -50,6 +51,7 @@ Compare the target against confirmed context for:
 - UI, interaction, and creative patterns.
 - Testing expectations.
 - Open questions that should block handoff or implementation.
+- Task health, blockers, missing owners, stale dates, and readiness gaps.
 - Claims that have no evidence in context or code.
 - Confirmed context that appears stale compared with current project files.
 
@@ -105,7 +107,62 @@ Use one of these actions for each finding:
 - `Update the artifact` when the spec, design, wireframe, handoff, or task appears inconsistent with confirmed context.
 - `Update context` when the project has changed and confirmed context is probably stale.
 - `Ask the user` when both the artifact and context are plausible but conflict.
+- `Resolve blockers` when tasks, open questions, or missing ownership make implementation unready.
 - `Proceed with note` when the mismatch is minor or already acknowledged.
+
+## Readiness Review
+
+When reviewing handoff or implementation readiness, read:
+
+```text
+[flow-root]/specs/[feature]/tasks/
+[flow-root]/context/
+[flow-root]/specs/[feature]/handoff.md
+[flow-root]/design/[feature]/
+[flow-root]/wireframes/[feature]/
+```
+
+Also support legacy local paths such as:
+
+```text
+specs/[feature]/tasks/
+```
+
+Check for:
+
+- Blocked tasks.
+- Tasks with missing assignees when ownership matters.
+- Missing or stale `Last updated` fields.
+- Unresolved open questions in specs, design docs, context docs, or handoff docs.
+- Handoffs created while context is still `Draft` or `Needs Review`.
+- Tasks that conflict with confirmed codebase patterns.
+- Implementation steps that depend on unconfirmed product decisions.
+
+Readiness findings should use the same severity format as drift findings.
+
+Example:
+
+```md
+### High
+
+- Handoff is not ready because context is still draft.
+  - Target: implementation handoff
+  - Context: `[flow-root]/context/README.md`
+  - Issue: The handoff treats project context as confirmed, but context files still show `Status: Draft`.
+  - Recommendation: Ask the user to confirm or correct context before implementation starts.
+```
+
+Example:
+
+```md
+### Medium
+
+- Blocked task has no owner.
+  - Target: task file
+  - Context: task metadata
+  - Issue: The task is blocked and has no assignee, so the next action is unclear.
+  - Recommendation: Resolve blockers by assigning an owner and clarifying the dependency.
+```
 
 ## Codebase Drift
 
@@ -152,9 +209,9 @@ Recommended:
 
 Optional:
 - Run `flow-context` if the review shows confirmed context is missing or stale.
+- Run `flow-track` if delivery status, blockers, or assignees need a dedicated summary.
 - Run the relevant Flow skill again after corrections if the artifact needs regeneration.
 
 Do not do yet:
-- Do not proceed to implementation while high-severity drift is unresolved.
+- Do not proceed to implementation while high-severity drift, blocked tasks, draft context, or blocking open questions remain unresolved.
 ```
-

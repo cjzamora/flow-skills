@@ -39,7 +39,21 @@ flow-context
 flow-check
 ```
 
-`flow-track` is intentionally left out of v1. Task files include enough status and ownership information that tracking can be added later without changing the folder structure.
+Flow v3 is drafted as tracking, readiness, and ask:
+
+```text
+flow-track
+flow-ask
+flow-check readiness upgrades
+```
+
+The roadmap lives at:
+
+```text
+docs/roadmap.md
+```
+
+`flow-track` was intentionally left out of v1, then added in v3 after task metadata, context, and readiness checks were in place.
 
 ## Core Workflow
 
@@ -449,15 +463,28 @@ Safety rules:
 - Prefer appending or updating a clearly marked Flow section.
 - Keep generated docs concise enough that humans will actually maintain them.
 
-## Future Add-On: flow-track
+## flow-track
 
-`flow-track` may be added later if teams need progress summaries or status updates across many tasks.
+`flow-track` summarizes local Flow task state without replacing external delivery trackers.
 
-Potential responsibilities:
+Responsibilities:
 
 - Summarize task status for a feature revision.
 - Find blocked tasks.
-- Update task statuses.
-- Report assignees and external links.
+- Report assignees, missing owners, stale dates, and external links.
+- Recommend next delivery actions.
 
-It is intentionally excluded from v1 to keep Flow focused on decisions, specs, design, wireframes, and handoff.
+It is read-only by default and should not mutate task status unless explicitly asked.
+
+## flow-ask
+
+`flow-ask` answers project questions using confirmed context, local search, and optional indexed retrieval.
+
+Retrieval tiers:
+
+- Tier 0: confirmed context docs plus local text search.
+- Tier 1: local source manifest and chunk map.
+- Tier 2: optional local vector index.
+- Tier 3: optional external/vector provider integrations.
+
+`flow-ask` must cite sources, state confidence, distinguish sourced facts from inference, and say when an answer is unknown. Vector search is optional support, not the source of truth.
