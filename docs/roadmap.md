@@ -146,6 +146,30 @@ Boundary:
 - Start with export files or copy-ready Markdown.
 - Avoid automatic tracker publishing until users explicitly ask for it.
 
+### Optional Prototyping
+
+Create disposable clickable prototypes from approved specs, functional designs, or wireframes.
+
+Potential future skill:
+
+```text
+flow-prototype
+```
+
+Purpose:
+
+- Validate risky UX, state transitions, forms, dashboards, onboarding flows, and complex interactions before engineering starts.
+- Help stakeholders test intended behavior instead of only reviewing static docs.
+- Give implementation agents a concrete behavioral reference when a feature has meaningful interaction risk.
+
+Boundary:
+
+- Prototypes are opt-in and should not be required for every Flow feature.
+- Prototype output is not production code.
+- Static wireframes remain the lightweight default.
+- Framework-native prototypes should only be created when the user asks or the repo already has an obvious frontend stack.
+- Prototypes must link back to the source PRD, design, wireframes, assumptions, and open questions.
+
 ### Fixture-Based Validation
 
 Expand `examples/` with small fixture projects.
