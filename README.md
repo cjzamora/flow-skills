@@ -6,31 +6,34 @@ Flow is built for PMs, designers, developers, clients, stakeholders, and agents 
 
 ## What Is Included
 
-```text
-flow-scaffold   Prepare a repo for Flow product docs.
-flow-context    Scan and verify brownfield project context.
-flow-check      Review Flow artifacts for context drift.
-flow-track      Summarize Flow task status and blockers.
-flow-ask        Answer project questions with cited local context.
-flow-export     Generate issue-ready Markdown from Flow tasks.
-flow-grill      Clarify a product idea before writing a spec.
-flow-spec       Create readable product specs and task files.
-flow-design     Create functional design docs.
-flow-wireframe  Create static HTML/CSS wireframe previews.
-flow-handoff    Create concise implementation handoffs.
-```
+| Skill | Purpose |
+| --- | --- |
+| `flow-scaffold` | Prepare a repo for Flow product docs. |
+| `flow-grill` | Clarify a product idea before writing a spec. |
+| `flow-spec` | Create readable product specs and task files. |
+| `flow-design` | Create functional design docs. |
+| `flow-wireframe` | Create static HTML/CSS wireframe previews. |
+| `flow-handoff` | Create concise implementation handoffs. |
+| `flow-context` | Scan and verify brownfield project context. |
+| `flow-check` | Review Flow artifacts for context drift and readiness. |
+| `flow-track` | Summarize Flow task status and blockers. |
+| `flow-ask` | Answer project questions with cited local context. |
+| `flow-export` | Generate issue-ready Markdown from Flow tasks. |
 
 ## Repository Layout
 
-```text
-skills/                       Installable Flow skills
-specs/flow-skill-suite/        PRD and task breakdown for this suite
-examples/                      Validation fixtures for dogfooding
-docs/flow-overview.md          Suite design notes
-docs/roadmap.md                Future improvements and roadmap
-AGENTS.md                      Agent guidance for this repo
-bin/flow-skills.js             Installer CLI
-```
+| Path | Purpose |
+| --- | --- |
+| `skills/` | Installable Flow skills. |
+| `specs/flow-skill-suite/` | PRD and task breakdown for the original suite. |
+| `specs/flow-v2-context-intelligence/` | Context intelligence PRD, tasks, and validation notes. |
+| `specs/flow-v3-tracking-readiness-ask/` | Tracking, readiness, and ask PRD, tasks, and validation notes. |
+| `specs/flow-v4-issue-export/` | Issue export PRD. |
+| `examples/` | Validation fixtures for dogfooding. |
+| `docs/flow-overview.md` | Suite design notes. |
+| `docs/roadmap.md` | Future improvements and roadmap. |
+| `AGENTS.md` | Agent guidance for this repo. |
+| `bin/flow-skills.js` | Installer and validation CLI. |
 
 ## Install
 
@@ -62,19 +65,19 @@ See [INSTALLATION.md](INSTALLATION.md) for paths, options, and examples.
 
 After installation, ask your agent to use one of the Flow skills:
 
-```text
-Use flow-scaffold to set up this repo for Flow.
-Use flow-context to scan this brownfield project and draft Flow context.
-Use flow-check to review this Flow spec against confirmed context.
-Use flow-track to summarize task status and blockers.
-Use flow-ask to answer where invoice data access lives.
-Use flow-export to generate issue-ready Markdown from these Flow tasks.
-Use flow-grill to clarify this feature idea.
-Use flow-spec to create a PRD for saved payment methods.
-Use flow-design to create functional design docs for this feature.
-Use flow-wireframe to create static wireframes.
-Use flow-handoff to prepare this approved spec for implementation.
-```
+| Request | Use when |
+| --- | --- |
+| `Use flow-scaffold to set up this repo for Flow.` | Starting Flow in a repo. |
+| `Use flow-context to scan this brownfield project and draft Flow context.` | Building project context from existing code/docs. |
+| `Use flow-check to review this Flow spec against confirmed context.` | Checking drift, readiness, or consistency. |
+| `Use flow-track to summarize task status and blockers.` | Reviewing delivery health from task files. |
+| `Use flow-ask to answer where invoice data access lives.` | Asking source-cited project questions. |
+| `Use flow-export to generate issue-ready Markdown from these Flow tasks.` | Creating copy-ready issue Markdown. |
+| `Use flow-grill to clarify this feature idea.` | Shaping an idea before a PRD. |
+| `Use flow-spec to create a PRD for saved payment methods.` | Writing a product spec and task files. |
+| `Use flow-design to create functional design docs for this feature.` | Defining UX behavior, screens, rules, and states. |
+| `Use flow-wireframe to create static wireframes.` | Creating static HTML/CSS preview artifacts. |
+| `Use flow-handoff to prepare this approved spec for implementation.` | Preparing concise implementation guidance. |
 
 ## Flow Document Convention
 
@@ -97,29 +100,13 @@ Existing projects can keep using `specs/` or another documented Flow root. The s
 
 The v1, v2, and v3 skills are implemented under `skills/*`.
 
-V1 validation on a sample feature is tracked in:
-
-```text
-specs/flow-skill-suite/tasks/008-validate-flow-suite.md
-```
-
-V2 context intelligence is tracked in:
-
-```text
-specs/flow-v2-context-intelligence/
-```
-
-V3 tracking, readiness, and ask is drafted in:
-
-```text
-specs/flow-v3-tracking-readiness-ask/
-```
-
-V4 issue export is drafted in:
-
-```text
-specs/flow-v4-issue-export/
-```
+| Version | Status | Location |
+| --- | --- | --- |
+| V1 core workflow | Implemented | `specs/flow-skill-suite/` |
+| V1 validation | Done | `specs/flow-skill-suite/tasks/008-validate-flow-suite.md` |
+| V2 context intelligence | Implemented | `specs/flow-v2-context-intelligence/` |
+| V3 tracking, readiness, and ask | Implemented | `specs/flow-v3-tracking-readiness-ask/` |
+| V4 issue export | Implemented | `specs/flow-v4-issue-export/` |
 
 ## Roadmap
 
@@ -127,10 +114,12 @@ See [docs/roadmap.md](docs/roadmap.md) for the fuller roadmap.
 
 Current direction:
 
-- Dogfood `flow-track`, readiness checks, and `flow-ask` against more brownfield fixtures.
-- Use `flow-export` to generate issue-ready Markdown while keeping external publishing opt-in.
-- Keep `flow-ask` source-cited and local-first.
-- Keep vector/RAG support opt-in and outside the core Flow workflow.
+| Direction | Boundary |
+| --- | --- |
+| Dogfood `flow-track`, readiness checks, and `flow-ask` against more brownfield fixtures. | Keep validation fixture-based and reviewable. |
+| Use `flow-export` to generate issue-ready Markdown. | Keep external publishing opt-in. |
+| Keep `flow-ask` source-cited and local-first. | Do not treat uncited answers as canonical. |
+| Keep vector/RAG support opt-in. | Keep it outside the core Flow workflow. |
 
 ## Validate
 
