@@ -20,6 +20,27 @@ Flow is built for PMs, designers, developers, clients, stakeholders, and agents 
 | `flow-ask` | Answer project questions with cited local context. |
 | `flow-export` | Generate issue-ready Markdown from Flow tasks. |
 
+## Suite Flow
+
+```mermaid
+flowchart LR
+  A["Start a repo or feature"] --> B{"Existing project?"}
+  B -->|Yes| C["flow-context<br/>scan and confirm project context"]
+  B -->|No| D["flow-scaffold<br/>create Flow document root"]
+  C --> E["flow-grill<br/>clarify the idea"]
+  D --> E
+  E --> F["flow-spec<br/>write PRD and tasks"]
+  F --> G["flow-design<br/>define behavior and states"]
+  G --> H["flow-wireframe<br/>create static previews"]
+  H --> I["flow-check<br/>review drift and readiness"]
+  I --> J["flow-handoff<br/>prepare implementation handoff"]
+  J --> K["Implementation"]
+
+  F -.-> L["flow-track<br/>summarize task health"]
+  C -.-> M["flow-ask<br/>answer cited project questions"]
+  I -.-> N["flow-export<br/>create issue-ready Markdown"]
+```
+
 ## Repository Layout
 
 | Path | Purpose |
