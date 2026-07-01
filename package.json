@@ -1,0 +1,34 @@
+{
+  "name": "flow-skill",
+  "version": "0.1.0",
+  "description": "Lightweight Flow product-development skills for Codex, Claude, and OpenCode.",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjzamora/flow-skill.git"
+  },
+  "homepage": "https://github.com/cjzamora/flow-skill#readme",
+  "bugs": {
+    "url": "https://github.com/cjzamora/flow-skill/issues"
+  },
+  "bin": {
+    "flow-skill": "bin/flow-skills.js",
+    "flow-skills": "bin/flow-skills.js",
+    "flow": "bin/flow-skills.js"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "README.md",
+    "INSTALLATION.md"
+  ],
+  "scripts": {
+    "install:codex": "node bin/flow-skills.js install --target codex",
+    "install:claude": "node bin/flow-skills.js install --target claude",
+    "install:opencode": "node bin/flow-skills.js install --target opencode"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

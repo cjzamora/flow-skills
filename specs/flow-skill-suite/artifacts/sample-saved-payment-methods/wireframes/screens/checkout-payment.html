@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkout Payment Step</title>
+    <link rel="stylesheet" href="../shared/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-link" href="../index.html">Back to preview</a>
+      <header class="header compact">
+        <p class="eyebrow">Checkout</p>
+        <h1>Payment</h1>
+      </header>
+
+      <section class="checkout">
+        <div class="panel">
+          <h2>Saved payment methods</h2>
+          <label class="payment-option selected">
+            <input type="radio" checked>
+            <span>
+              <strong>Visa ending in 4242</strong>
+              <small>Expires 08/28</small>
+            </span>
+          </label>
+          <label class="payment-option">
+            <input type="radio">
+            <span>
+              <strong>Use a new payment method</strong>
+              <small>Enter card details for this order</small>
+            </span>
+          </label>
+          <p class="message error">This saved card was declined. Choose another method to continue.</p>
+        </div>
+
+        <aside class="panel summary">
+          <h2>Order summary</h2>
+          <div class="row"><span>Subtotal</span><strong>$84.00</strong></div>
+          <div class="row"><span>Shipping</span><strong>$6.00</strong></div>
+          <div class="row total"><span>Total</span><strong>$90.00</strong></div>
+          <button>Continue</button>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

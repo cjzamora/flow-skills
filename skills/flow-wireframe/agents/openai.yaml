@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flow Wireframe"
+  short_description: "Create static HTML wireframe previews."
+  default_prompt: "Create Flow wireframes for this feature."

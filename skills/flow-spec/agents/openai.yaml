@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flow Spec"
+  short_description: "Create readable Flow feature specs."
+  default_prompt: "Create a Flow spec for this feature."

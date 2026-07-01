@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flow Scaffold"
+  short_description: "Prepare a repository for Flow product docs."
+  default_prompt: "Set up this repo for Flow product docs."
