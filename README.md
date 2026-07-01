@@ -32,9 +32,9 @@ bin/flow-skills.js             Installer CLI
 From GitHub:
 
 ```sh
-npx github:cjzamora/flow-skill install --target codex
-npx github:cjzamora/flow-skill install --target claude
-npx github:cjzamora/flow-skill install --target opencode
+npx github:cjzamora/flow-skills install --target codex
+npx github:cjzamora/flow-skills install --target claude
+npx github:cjzamora/flow-skills install --target opencode
 ```
 
 From a local clone:

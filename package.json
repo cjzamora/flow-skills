@@ -1,15 +1,15 @@
 {
-  "name": "flow-skill",
+  "name": "flow-skills",
   "version": "0.1.0",
   "description": "Lightweight Flow product-development skills for Codex, Claude, and OpenCode.",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cjzamora/flow-skill.git"
+    "url": "git+https://github.com/cjzamora/flow-skills.git"
   },
-  "homepage": "https://github.com/cjzamora/flow-skill#readme",
+  "homepage": "https://github.com/cjzamora/flow-skills#readme",
   "bugs": {
-    "url": "https://github.com/cjzamora/flow-skill/issues"
+    "url": "https://github.com/cjzamora/flow-skills/issues"
   },
   "bin": {
     "flow-skill": "bin/flow-skills.js",

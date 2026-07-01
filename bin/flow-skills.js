@@ -26,9 +26,9 @@ Usage:
   flow-skills list
 
 Examples:
-  npx github:cjzamora/flow-skill install --target codex
-  npx github:cjzamora/flow-skill install --target claude
-  npx github:cjzamora/flow-skill install --target opencode
+  npx github:cjzamora/flow-skills install --target codex
+  npx github:cjzamora/flow-skills install --target claude
+  npx github:cjzamora/flow-skills install --target opencode
 
 Options:
   --target   Agent target to install into.

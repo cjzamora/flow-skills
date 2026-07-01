@@ -5,17 +5,17 @@ Flow Skills can be installed into Codex, Claude, or OpenCode-style skill folders
 ## Install From GitHub
 
 ```sh
-npx github:cjzamora/flow-skill install --target codex
-npx github:cjzamora/flow-skill install --target claude
-npx github:cjzamora/flow-skill install --target opencode
+npx github:cjzamora/flow-skills install --target codex
+npx github:cjzamora/flow-skills install --target claude
+npx github:cjzamora/flow-skills install --target opencode
 ```
 
 Examples using the requested style:
 
 ```sh
-npx github:cjzamora/flow-skill install --target codex
-npx github:cjzamora/flow-skill install --target claude
-npx github:cjzamora/flow-skill install --target opencode
+npx github:cjzamora/flow-skills install --target codex
+npx github:cjzamora/flow-skills install --target claude
+npx github:cjzamora/flow-skills install --target opencode
 ```
 
 ## Install From a Local Clone
@@ -47,25 +47,25 @@ opencode  $OPENCODE_HOME/skills or ~/.config/opencode/skills
 Preview the install without writing files:
 
 ```sh
-npx github:cjzamora/flow-skill install --target codex --dry-run
+npx github:cjzamora/flow-skills install --target codex --dry-run
 ```
 
 Replace existing Flow skill folders:
 
 ```sh
-npx github:cjzamora/flow-skill install --target codex --force
+npx github:cjzamora/flow-skills install --target codex --force
 ```
 
 Install to a custom skills directory:
 
 ```sh
-npx github:cjzamora/flow-skill install --target codex --dest /path/to/skills
+npx github:cjzamora/flow-skills install --target codex --dest /path/to/skills
 ```
 
 List bundled skills:
 
 ```sh
-npx github:cjzamora/flow-skill list
+npx github:cjzamora/flow-skills list
 ```
 
 ## What Gets Installed
