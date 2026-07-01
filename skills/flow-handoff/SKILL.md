@@ -1,6 +1,6 @@
 ---
 name: flow-handoff
-description: Create a concise implementation handoff for a Flow feature. Use when the user asks to hand off an approved spec/design/wireframe to developers, prepare build-ready work, summarize decisions for implementation, or create handoff.md from Flow docs.
+description: Create a concise implementation handoff for a Flow feature. Use only when the user explicitly invokes flow-handoff or explicitly asks to create a Flow handoff.
 ---
 
 # Flow Handoff

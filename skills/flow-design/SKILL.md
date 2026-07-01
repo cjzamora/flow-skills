@@ -1,6 +1,6 @@
 ---
 name: flow-design
-description: Create functional design documents for a Flow feature. Use when the user asks for product design, functional design, UX behavior, user journeys, screen inventory, states, rules, permissions, or design handoff connected to a Flow spec.
+description: Create functional design documents for a Flow feature. Use only when the user explicitly invokes flow-design or explicitly asks to create a Flow functional design.
 ---
 
 # Flow Design

@@ -1,6 +1,6 @@
 ---
 name: flow-grill
-description: Clarify a product idea before writing a Flow spec. Use when the user wants to explore, challenge, grill, refine, or make decisions about a feature, product idea, workflow, design direction, or PRD before creating specs/designs/wireframes.
+description: Clarify a product idea before writing a Flow spec. Use only when the user explicitly invokes flow-grill or explicitly asks to grill/refine an idea with Flow.
 ---
 
 # Flow Grill

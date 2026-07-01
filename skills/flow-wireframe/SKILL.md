@@ -1,6 +1,6 @@
 ---
 name: flow-wireframe
-description: Create low-to-medium fidelity polished static HTML/CSS wireframe previews for a Flow feature. Use when the user asks for wireframes, clickable previews, static prototypes, screen mockups, UX previews, or HTML/CSS design artifacts connected to a Flow spec/design.
+description: Create low-to-medium fidelity polished static HTML/CSS wireframe previews for a Flow feature. Use only when the user explicitly invokes flow-wireframe or explicitly asks to create Flow wireframes.
 ---
 
 # Flow Wireframe

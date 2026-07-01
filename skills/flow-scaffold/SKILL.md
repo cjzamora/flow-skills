@@ -1,6 +1,6 @@
 ---
 name: flow-scaffold
-description: Prepare a repository for the Flow product-development workflow. Use when the user asks to set up, initialize, scaffold, repair, or add Flow conventions, docs folders, AGENTS.md guidance, or lightweight product/spec/design/wireframe structure for a repo.
+description: Prepare a repository for the Flow product-development workflow. Use only when the user explicitly invokes flow-scaffold or explicitly asks to set up Flow in a repository.
 ---
 
 # Flow Scaffold
@@ -11,17 +11,27 @@ Flow is a lightweight product-development workflow for PMs, designers, developer
 
 ## What To Create
 
-Create or repair this structure:
+Create or repair this structure by default:
 
 ```text
 AGENTS.md
-specs/
+.flow/
   README.md
-docs/
-  flow-overview.md
+  specs/
+    README.md
+  context/
+    README.md
+  design/
+    README.md
+  wireframes/
+    README.md
 ```
 
-Use `specs/[feature]/prd.md` and `specs/[feature]/tasks/` for local PRDs and task breakdowns unless the repo already documents a different Flow convention.
+Ask the user where Flow documents should live when the repo does not already document a Flow root. Recommend `.flow/`.
+
+If an existing Flow root is detected, such as `specs/` or `docs/flow/`, preserve that convention unless the user explicitly asks to migrate.
+
+Use `[flow-root]/specs/[feature]/prd.md` and `[flow-root]/specs/[feature]/tasks/` for local PRDs and task breakdowns.
 
 ## AGENTS.md
 
@@ -39,8 +49,8 @@ Use Flow for lightweight product-development work.
 Local specs and task breakdowns live under:
 
 ```text
-specs/[feature]/prd.md
-specs/[feature]/tasks/
+.flow/specs/[feature]/prd.md
+.flow/specs/[feature]/tasks/
 ```
 
 Write for PMs, designers, developers, clients, and stakeholders. Prefer plain language, short sections, human-readable decisions, and clear owner/status fields.
@@ -52,8 +62,13 @@ Do not overwrite existing specs or task files without explicit user approval.
 
 Create short index files only when missing:
 
-- `specs/README.md`: explain that specs live under `specs/[feature]/`.
-- `docs/flow-overview.md`: summarize Flow conventions or point to the suite definition if one already exists.
+- `[flow-root]/README.md`: explain the local Flow root and document types.
+- `[flow-root]/specs/README.md`: explain that specs live under `[flow-root]/specs/[feature]/`.
+- `[flow-root]/context/README.md`: explain where project context will live when `flow-context` is used.
+- `[flow-root]/design/README.md`: explain where functional design docs live.
+- `[flow-root]/wireframes/README.md`: explain where wireframe previews live.
+
+Do not create `docs/flow-overview.md` unless the user chooses `docs/flow/` or another `docs/` path as the Flow root.
 
 Keep generated guidance short. This skill sets the foundation; it should not generate full feature specs, designs, wireframes, or handoffs.
 

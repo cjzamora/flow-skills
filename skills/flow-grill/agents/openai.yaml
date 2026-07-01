@@ -1,4 +1,4 @@
 interface:
   display_name: "Flow Grill"
-  short_description: "Clarify product ideas before specs."
+  short_description: "Manual only: clarify product ideas before Flow specs."
   default_prompt: "Grill this product idea with Flow."

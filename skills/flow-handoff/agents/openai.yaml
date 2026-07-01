@@ -1,4 +1,4 @@
 interface:
   display_name: "Flow Handoff"
-  short_description: "Create build-ready implementation handoffs."
+  short_description: "Manual only: create build-ready Flow handoffs."
   default_prompt: "Create a Flow implementation handoff."

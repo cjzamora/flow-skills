@@ -1,6 +1,6 @@
 ---
 name: flow-spec
-description: Create or update a human-readable Flow product spec or PRD. Use when the user asks for a Flow spec, PRD, requirements document, feature spec, scoped product plan, or task-ready product document under specs/[feature]/.
+description: Create or update a human-readable Flow product spec or PRD. Use only when the user explicitly invokes flow-spec or explicitly asks to create a Flow spec.
 ---
 
 # Flow Spec

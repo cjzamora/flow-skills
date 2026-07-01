@@ -1,4 +1,4 @@
 interface:
   display_name: "Flow Design"
-  short_description: "Create functional design docs for a Flow spec."
+  short_description: "Manual only: create functional design docs for a Flow spec."
   default_prompt: "Create a Flow functional design for this feature."
