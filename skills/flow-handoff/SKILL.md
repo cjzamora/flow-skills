@@ -10,12 +10,12 @@ Create a build-ready handoff that a developer can read in five minutes.
 Default path:
 
 ```text
-specs/[feature]/handoff.md
+[flow-root]/specs/[feature]/handoff.md
 ```
 
 ## Before Writing
 
-- Read the PRD, tasks, design docs, and wireframes if they exist.
+- Read the PRD, tasks, design docs, wireframes, confirmed context docs, and codebase patterns if they exist.
 - Do not invent certainty. Preserve open questions and engineering judgment areas.
 - Do not replace existing task files unless the user explicitly asks.
 
@@ -57,7 +57,7 @@ Last updated:
 If the PRD has no task files and the user wants implementation tasks, create them under:
 
 ```text
-specs/[feature]/tasks/
+[flow-root]/specs/[feature]/tasks/
 ```
 
 Use the same task format as `flow-spec`:
@@ -84,3 +84,21 @@ Last updated:
 - Include links to the source docs.
 - Prefer suggested build order over detailed implementation commands.
 - Surface blockers clearly.
+
+## Recommended Next Steps
+
+End with a short recommendation block:
+
+```md
+## Recommended Next Steps
+
+Recommended:
+- Run `flow-check` before implementation if confirmed context exists.
+- Hand the approved handoff to engineering with the linked PRD, design, wireframes, and tasks.
+
+Optional:
+- Create or link external tracker tickets if the team manages delivery outside the repo.
+
+Do not do yet:
+- Do not start implementation if the handoff still lists unresolved product decisions as blockers.
+```

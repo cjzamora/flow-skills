@@ -1,0 +1,5 @@
+interface:
+  display_name: "Flow Check"
+  short_description: "Manual only: review Flow artifacts for context drift."
+  default_prompt: "Use flow-check to review this Flow artifact against confirmed context."
+

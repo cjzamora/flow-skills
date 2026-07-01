@@ -8,6 +8,8 @@ Flow is built for PMs, designers, developers, clients, stakeholders, and agents 
 
 ```text
 flow-scaffold   Prepare a repo for Flow product docs.
+flow-context    Scan and verify brownfield project context.
+flow-check      Review Flow artifacts for context drift.
 flow-grill      Clarify a product idea before writing a spec.
 flow-spec       Create readable product specs and task files.
 flow-design     Create functional design docs.
@@ -51,6 +53,8 @@ After installation, ask your agent to use one of the Flow skills:
 
 ```text
 Use flow-scaffold to set up this repo for Flow.
+Use flow-context to scan this brownfield project and draft Flow context.
+Use flow-check to review this Flow spec against confirmed context.
 Use flow-grill to clarify this feature idea.
 Use flow-spec to create a PRD for saved payment methods.
 Use flow-design to create functional design docs for this feature.
@@ -60,19 +64,33 @@ Use flow-handoff to prepare this approved spec for implementation.
 
 ## Flow Document Convention
 
-Local PRDs and task breakdowns use:
+New scaffolded projects default to:
 
 ```text
-specs/[feature]/prd.md
-specs/[feature]/tasks/
+.flow/
 ```
 
-The skills avoid overwriting existing specs or task files unless the user explicitly asks.
+Local PRDs and task breakdowns use the configured Flow root:
+
+```text
+[flow-root]/specs/[feature]/prd.md
+[flow-root]/specs/[feature]/tasks/
+```
+
+Existing projects can keep using `specs/` or another documented Flow root. The skills avoid overwriting existing specs or task files unless the user explicitly asks.
 
 ## Status
 
-The v1 skills are implemented under `skills/*`. End-to-end validation on a sample feature is still tracked in:
+The v1 skills and v2 context intelligence skills are implemented under `skills/*`.
+
+V1 validation on a sample feature is tracked in:
 
 ```text
 specs/flow-skill-suite/tasks/008-validate-flow-suite.md
+```
+
+V2 context intelligence is tracked in:
+
+```text
+specs/flow-v2-context-intelligence/
 ```

@@ -33,6 +33,28 @@ If an existing Flow root is detected, such as `specs/` or `docs/flow/`, preserve
 
 Use `[flow-root]/specs/[feature]/prd.md` and `[flow-root]/specs/[feature]/tasks/` for local PRDs and task breakdowns.
 
+## Flow Root Selection
+
+Before creating folders, inspect the repo for an existing Flow convention:
+
+- `AGENTS.md`, `CLAUDE.md`, or other agent guidance that names a Flow root.
+- Existing `.flow/`, `specs/`, `docs/flow/`, or `docs/specs/` folders.
+- Existing Flow-style files such as `prd.md`, `tasks/README.md`, `design/`, `wireframes/`, or `context/`.
+
+If no convention exists, ask the user where Flow documents should live. Recommend:
+
+```text
+.flow/
+```
+
+Use these options when helpful:
+
+1. `.flow/` - recommended for new projects because Flow artifacts stay grouped.
+2. `docs/flow/` - useful when the repo already treats `docs/` as the documentation hub.
+3. `specs/` - useful for existing Flow v1 projects or simple repos.
+
+If a legacy convention already exists, prefer continuing with it. Do not migrate existing Flow files unless the user explicitly asks.
+
 ## AGENTS.md
 
 If `AGENTS.md` exists, preserve unrelated content and update or append one `## Flow Product Docs` section. Do not duplicate it.
@@ -78,3 +100,22 @@ Keep generated guidance short. This skill sets the foundation; it should not gen
 - Ask only when a naming or overwrite decision is genuinely ambiguous.
 - Prefer appending clearly marked Flow guidance over replacing files.
 - Report the files created or changed at the end.
+
+## Recommended Next Steps
+
+End with a short recommendation block:
+
+```md
+## Recommended Next Steps
+
+Recommended:
+- Run `flow-context` if this is a brownfield project and Flow needs to understand the existing product and codebase.
+- Run `flow-grill` if the next feature idea still needs clarification.
+- Run `flow-spec` if the feature is already clear enough for a PRD.
+
+Optional:
+- Ask stakeholders to confirm the chosen Flow root before adding many artifacts.
+
+Do not do yet:
+- Do not migrate existing Flow files to a new root unless the user explicitly approves that move.
+```

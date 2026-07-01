@@ -1,6 +1,6 @@
 # Update Scaffold to Support Configurable Flow Roots
 
-Status: Ready
+Status: Done
 Assignee:
 External link:
 Last updated: 2026-07-02
@@ -13,14 +13,14 @@ This slice should leave scaffolded repos with clear agent guidance that records 
 
 ## Acceptance Criteria
 
-- [ ] `flow-scaffold` asks where Flow documents should live when no existing Flow root is detected.
-- [ ] `.flow/` is presented as the recommended default.
-- [ ] Existing `specs/` or `docs/` Flow conventions are detected before creating a new root.
-- [ ] The chosen root is recorded in `AGENTS.md` or the repo's existing agent guidance file.
-- [ ] Scaffold creates short index files under the chosen root.
-- [ ] Scaffold does not create `docs/flow-overview.md` unless the user chooses a `docs/` path as the Flow root.
-- [ ] Existing user-authored files are preserved.
-- [ ] The skill reports what it created, changed, skipped, or recommended.
+- [x] `flow-scaffold` asks where Flow documents should live when no existing Flow root is detected.
+- [x] `.flow/` is presented as the recommended default.
+- [x] Existing `specs/` or `docs/` Flow conventions are detected before creating a new root.
+- [x] The chosen root is recorded in `AGENTS.md` or the repo's existing agent guidance file.
+- [x] Scaffold creates short index files under the chosen root.
+- [x] Scaffold does not create `docs/flow-overview.md` unless the user chooses a `docs/` path as the Flow root.
+- [x] Existing user-authored files are preserved.
+- [x] The skill reports what it created, changed, skipped, or recommended.
 
 ## Blocked By
 

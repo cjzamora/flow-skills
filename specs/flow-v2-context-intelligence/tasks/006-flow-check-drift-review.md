@@ -1,6 +1,6 @@
 # Implement Flow Check Drift Review
 
-Status: Ready
+Status: Done
 Assignee:
 External link:
 Last updated: 2026-07-02
@@ -13,13 +13,13 @@ This slice should help users catch drift, unsupported assumptions, and mismatche
 
 ## Acceptance Criteria
 
-- [ ] `flow-check` exists as an installable Flow skill.
-- [ ] The skill reads confirmed context from the configured Flow root.
-- [ ] The skill can review a Flow spec, design, wireframe package, handoff, or current codebase state.
-- [ ] Findings are grouped by severity or priority in plain language.
-- [ ] Findings identify drift, missing context, unsupported assumptions, stale context, and conflicts with canonical patterns.
-- [ ] The skill recommends whether to update the artifact, update context, ask the user, or proceed.
-- [ ] The skill does not enforce rules through code changes unless explicitly asked.
+- [x] `flow-check` exists as an installable Flow skill.
+- [x] The skill reads confirmed context from the configured Flow root.
+- [x] The skill can review a Flow spec, design, wireframe package, handoff, or current codebase state.
+- [x] Findings are grouped by severity or priority in plain language.
+- [x] Findings identify drift, missing context, unsupported assumptions, stale context, and conflicts with canonical patterns.
+- [x] The skill recommends whether to update the artifact, update context, ask the user, or proceed.
+- [x] The skill does not enforce rules through code changes unless explicitly asked.
 
 ## Blocked By
 
@@ -31,4 +31,3 @@ This slice should help users catch drift, unsupported assumptions, and mismatche
 - 16. As a developer, I want Flow to detect drift between confirmed context and current code, so that stale documentation can be corrected.
 - 17. As a PM, I want Flow to detect drift between confirmed context and new specs, so that product docs do not invent unsupported behavior.
 - 18. As a designer, I want Flow to detect drift between confirmed UI patterns and new wireframes, so that visual and interaction patterns remain coherent.
-

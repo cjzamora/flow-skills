@@ -95,8 +95,26 @@ Keep the summary brief. Do not create files unless the user asks or says to move
 When the feature is ready for a spec, say so and offer to create:
 
 ```text
-specs/[feature]/prd.md
-specs/[feature]/tasks/
+[flow-root]/specs/[feature]/prd.md
+[flow-root]/specs/[feature]/tasks/
 ```
 
 Do not pretend uncertainty is resolved. Carry real open questions into the spec as risks or decisions needed.
+
+## Recommended Next Steps
+
+End with a short recommendation block:
+
+```md
+## Recommended Next Steps
+
+Recommended:
+- Run `flow-spec` once the main problem, users, goals, scope, and risks are clear.
+- Run `flow-context` first if this is a brownfield project and the product or codebase context is not yet confirmed.
+
+Optional:
+- Share the resolved decisions with stakeholders before writing the PRD if the scope changed materially.
+
+Do not do yet:
+- Do not run `flow-design`, `flow-wireframe`, or `flow-handoff` while the core product decision is still unresolved.
+```

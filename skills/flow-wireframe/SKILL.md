@@ -10,15 +10,15 @@ Create static HTML/CSS preview packages that are easy to open and review.
 Default path:
 
 ```text
-specs/[feature]/wireframes/
+[flow-root]/wireframes/[feature]/
 ```
 
-Link back to `specs/[feature]/prd.md` and `specs/[feature]/design/` when available.
+Link back to `[flow-root]/specs/[feature]/prd.md` and `[flow-root]/design/[feature]/` when available.
 
 ## Output Structure
 
 ```text
-specs/[feature]/wireframes/
+[flow-root]/wireframes/[feature]/
   README.md
   index.html
   screens/
@@ -49,7 +49,7 @@ Default to low-to-medium fidelity, but polished:
 
 ## Process
 
-1. Read the PRD and functional design if present.
+1. Read the PRD, functional design, confirmed context docs, and UI/codebase patterns if present.
 2. Identify the screens and states to represent.
 3. Create the package structure.
 4. Implement a readable preview hub.
@@ -62,3 +62,21 @@ Default to low-to-medium fidelity, but polished:
 - UI elements must not overlap.
 - Navigation between preview pages must work.
 - The artifact should be understandable to PMs, designers, developers, and clients.
+
+## Recommended Next Steps
+
+End with a short recommendation block:
+
+```md
+## Recommended Next Steps
+
+Recommended:
+- Open the generated `index.html` and review the screens with stakeholders.
+- Run `flow-check` if confirmed UI or product context exists and the wireframes should be checked for drift.
+
+Optional:
+- Run `flow-handoff` after the PRD, design, and wireframes are reviewed or approved.
+
+Do not do yet:
+- Do not treat wireframes as implementation-ready if they omit important empty, loading, error, success, or permission states.
+```

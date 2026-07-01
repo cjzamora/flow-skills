@@ -10,21 +10,21 @@ Create a readable product spec for people first: PMs, designers, developers, cli
 Default local path:
 
 ```text
-specs/[feature]/prd.md
-specs/[feature]/tasks/
+[flow-root]/specs/[feature]/prd.md
+[flow-root]/specs/[feature]/tasks/
 ```
 
 Use a lowercase hyphenated feature slug.
 
 ## Before Writing
 
-- Read existing `AGENTS.md`, `docs/flow-overview.md`, and any existing `specs/[feature]/` files.
+- Read existing `AGENTS.md`, the configured Flow root, confirmed context docs if present, and any existing spec files for the feature.
 - If the target spec already exists, do not overwrite it without explicit user approval.
 - If the idea is unclear, ask only the minimum necessary questions. Prefer using `flow-grill` for deeper discovery.
 
 ## PRD Template
 
-Create `specs/[feature]/prd.md`:
+Create `[flow-root]/specs/[feature]/prd.md`:
 
 ```md
 # [Feature Name] PRD
@@ -74,7 +74,7 @@ Create `specs/[feature]/tasks/README.md` with a task index.
 When asked to create implementation tasks, create one file per task:
 
 ```text
-specs/[feature]/tasks/001-task-name.md
+[flow-root]/specs/[feature]/tasks/001-task-name.md
 ```
 
 Task template:
@@ -105,3 +105,22 @@ None - can start immediately.
 - Keep technical detail only where it helps implementation.
 - Do not include machine-readable schemas as the primary artifact.
 - Link to design, wireframes, and handoff files when they exist.
+
+## Recommended Next Steps
+
+End with a short recommendation block:
+
+```md
+## Recommended Next Steps
+
+Recommended:
+- Run `flow-design` next if the PRD defines user-facing behavior, workflows, screens, rules, or permissions.
+- Run `flow-check` if confirmed project context exists and the PRD should be checked for drift.
+
+Optional:
+- Run `flow-wireframe` after design if stakeholders need screen previews.
+- Share the PRD with stakeholders for review before implementation handoff.
+
+Do not do yet:
+- Do not run `flow-handoff` while major risks or open questions remain unresolved.
+```

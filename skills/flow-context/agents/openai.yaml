@@ -1,0 +1,5 @@
+interface:
+  display_name: "Flow Context"
+  short_description: "Manual only: scan and verify brownfield Flow context."
+  default_prompt: "Use flow-context to scan this project and draft Flow context."
+

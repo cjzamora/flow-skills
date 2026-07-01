@@ -10,14 +10,14 @@ Create functional design docs that explain how a feature works before or alongsi
 Default path:
 
 ```text
-specs/[feature]/design/
+[flow-root]/design/[feature]/
 ```
 
-Link back to `specs/[feature]/prd.md`.
+Link back to `[flow-root]/specs/[feature]/prd.md`.
 
 ## Before Writing
 
-- Read the feature PRD and any existing design or wireframe docs.
+- Read the feature PRD, confirmed context docs if present, and any existing design or wireframe docs.
 - If design docs already exist, preserve user content and ask before replacing them.
 - Keep design separate from wireframes. This skill defines behavior; `flow-wireframe` creates static previews.
 
@@ -26,7 +26,7 @@ Link back to `specs/[feature]/prd.md`.
 Create this small standard set:
 
 ```text
-specs/[feature]/design/
+[flow-root]/design/[feature]/
   README.md
   experience.md
   screens.md
@@ -74,3 +74,21 @@ specs/[feature]/design/
 - Make behavior explicit enough for design review and developer handoff.
 - Avoid final visual styling decisions unless the user asks.
 - Carry uncertainty into `open-questions.md`; do not hide it.
+
+## Recommended Next Steps
+
+End with a short recommendation block:
+
+```md
+## Recommended Next Steps
+
+Recommended:
+- Run `flow-wireframe` next if the design includes screens or states stakeholders should review visually.
+- Run `flow-check` if confirmed context exists and the design should be checked against product, architecture, or UI patterns.
+
+Optional:
+- Review the design with engineering if rules, permissions, or data behavior are complex.
+
+Do not do yet:
+- Do not run `flow-handoff` until open design questions are either resolved or explicitly accepted as engineering judgment.
+```

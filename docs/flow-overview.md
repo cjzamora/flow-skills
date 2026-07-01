@@ -21,7 +21,7 @@ It is designed for PMs, designers, developers, founders, clients, and agents wor
 
 ## Skill Suite
 
-Flow v1 contains six skills:
+Flow v1 contains six core workflow skills:
 
 ```text
 flow-scaffold
@@ -30,6 +30,13 @@ flow-spec
 flow-design
 flow-wireframe
 flow-handoff
+```
+
+Flow v2 adds context intelligence skills:
+
+```text
+flow-context
+flow-check
 ```
 
 `flow-track` is intentionally left out of v1. Task files include enough status and ownership information that tracking can be added later without changing the folder structure.
@@ -50,7 +57,19 @@ The workflow is flexible. A team may start with `flow-scaffold`, skip wireframes
 
 ## Folder Structure
 
-Flow uses three primary documentation areas:
+New scaffolded projects default to a single Flow root:
+
+```text
+.flow/
+  context/
+  specs/
+  design/
+  wireframes/
+```
+
+Existing Flow projects may keep their documented root, including `specs/` or `docs/flow/`.
+
+The older suite definition used three primary documentation areas:
 
 ```text
 docs/
@@ -158,15 +177,19 @@ It creates or updates:
 
 ```text
 AGENTS.md
-docs/
+.flow/
   README.md
   specs/
+    README.md
+  context/
     README.md
   design/
     README.md
   wireframes/
     README.md
 ```
+
+`flow-scaffold` should ask where Flow documents should live when no Flow root exists. It should recommend `.flow/`, preserve existing Flow roots such as `specs/`, and avoid creating `docs/flow-overview.md` unless the user chooses a docs-based Flow root.
 
 `AGENTS.md` should stay short. If it already exists, `flow-scaffold` should append or update a clearly marked Flow section instead of replacing unrelated instructions.
 
@@ -175,12 +198,13 @@ Recommended `AGENTS.md` Flow section:
 ```md
 ## Flow Product Docs
 
-Use the lightweight Flow structure under `docs/`.
+Use the lightweight Flow structure under the configured Flow root.
 
-The source of truth for each feature revision is:
-`docs/specs/[feature]/[revision]/README.md`.
+Flow documents live under:
+`.flow/`
 
-Use numbered immutable revisions such as `001-initial-flow`.
+Product specs live under:
+`.flow/specs/[feature]/prd.md`
 
 Write specs, designs, wireframes, and handoffs in plain language for PMs, designers, developers, clients, and stakeholders.
 ```
@@ -369,6 +393,49 @@ Related wireframes:
 ```
 
 `flow-handoff` may also create or update task files in `tasks/`, but the main output should be readable by a developer in five minutes.
+
+## flow-context
+
+`flow-context` scans a brownfield project and creates draft project context with evidence, confidence, and verification questions.
+
+Default structure:
+
+```text
+[flow-root]/context/
+  README.md
+  product.md
+  users.md
+  workflows.md
+  architecture.md
+  codebase-patterns.md
+  data-model.md
+  ui-patterns.md
+  testing-patterns.md
+  agent-standards.md
+  open-questions.md
+```
+
+Core rule:
+
+```text
+Inferred context is draft. Confirmed context is canonical.
+```
+
+`flow-context` should capture product context and practical codebase operating patterns, including where shared code lives, how database access is organized, which UI patterns are canonical, and which patterns are legacy or should be avoided.
+
+## flow-check
+
+`flow-check` reviews Flow artifacts or current project state against confirmed context.
+
+It checks for:
+
+- Product and workflow drift.
+- Unsupported assumptions.
+- Conflicts with confirmed architecture or codebase patterns.
+- UI and creative pattern drift.
+- Stale confirmed context.
+
+It reports findings and recommendations in plain language. It does not enforce rules or change files unless the user explicitly asks.
 
 ## File Creation Rules
 

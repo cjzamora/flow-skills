@@ -6,11 +6,10 @@ Each task is written as a local markdown issue. External tracker publishing is i
 
 ## Task List
 
-1. Ready - [Update scaffold to support configurable Flow roots](001-configurable-flow-root.md)
-2. Ready - [Add recommended next steps to every Flow skill](002-recommended-next-steps.md)
-3. Ready - [Implement flow-context draft scanning](003-flow-context-draft-scan.md)
-4. Ready - [Add context confirmation and canonical docs](004-context-confirmation-canonical-docs.md)
-5. Ready - [Capture codebase and database patterns](005-codebase-patterns.md)
-6. Ready - [Implement flow-check drift review](006-flow-check-drift-review.md)
-7. Ready - [Validate v2 on a sample brownfield project](007-validate-v2-brownfield.md)
-
+1. Done - [Update scaffold to support configurable Flow roots](001-configurable-flow-root.md)
+2. Done - [Add recommended next steps to every Flow skill](002-recommended-next-steps.md)
+3. Done - [Implement flow-context draft scanning](003-flow-context-draft-scan.md)
+4. Done - [Add context confirmation and canonical docs](004-context-confirmation-canonical-docs.md)
+5. Done - [Capture codebase and database patterns](005-codebase-patterns.md)
+6. Done - [Implement flow-check drift review](006-flow-check-drift-review.md)
+7. Done - [Validate v2 on a sample brownfield project](007-validate-v2-brownfield.md)
